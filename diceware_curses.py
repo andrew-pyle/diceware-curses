@@ -15,15 +15,17 @@ arg_parser.add_argument(
     action='store_true',
     help='Use a blank space as a separator in the passphrase'
 )
-arg_parser.add_argument(
-    'numbers',
+arg_group = arg_parser.add_mutually_exclusive_group()
+arg_group.add_argument(
+    '-n',
+    '--numbers',
     nargs='+',
     help=('These numbers will be translated into words from EFF\'s large word '
           'list.')
 )
 
 # TODO Interactive mode
-arg_parser.add_argument(
+arg_group.add_argument(
     '-i', '--interactive',
     action='store_true',
     help='Set this flag to work in interactive mode with a terminal UI'
