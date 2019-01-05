@@ -36,12 +36,28 @@ arg_parser.add_argument(
 # )
 
 
-def import_eff_wordlist(filepath):
+def import_eff_large_wordlist(filepath):
+    '''Imports EFF's large wordlist as a dict.
+
+    Ignores lines starting with any character other than 1, 2, 3, 4, 5, or 6.
+
+    Args:
+        filepath (str): The location of the wordlist file, relative to working
+            directory of execution.
+
+    Returns:
+        (dict): Dict of all number-word pairs, e.g { number: word, ... }
+    '''
     dicewords = {}
     with open(filepath) as f:
         for line in f.readlines():
-            number, word = line.split()
-            dicewords[number] = word
+            # Check for number-word pair line
+            if line[0] in ['1', '2', '3', '4', '5', '6']:
+                number, word = line.split()
+                dicewords[number] = word
+            # Blank or commented line
+            else:
+                pass
     return dicewords
 
 
@@ -175,7 +191,7 @@ if __name__ == '__main__':
         separator = args.separator
 
     # Import EFF large word list
-    dicewords = import_eff_wordlist('eff_large_wordlist.txt')
+    dicewords = import_eff_large_wordlist('eff_large_wordlist.txt')
 
     # CLI Args mode
     if args.interactive is False:

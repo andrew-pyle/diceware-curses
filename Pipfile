@@ -9,6 +9,7 @@ name = "pypi"
 pylint = "*"
 rope = "*"
 "flake8" = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.7"

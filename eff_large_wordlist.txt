@@ -1,3 +1,8 @@
+# Electronic Frontier Foundation's Large Wordlist
+# Published 2016 by Electronic Frontier Foundation
+# Source: https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt
+# See also: https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases
+
 11111	abacus
 11112	abdomen
 11113	abdominal
