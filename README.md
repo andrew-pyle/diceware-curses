@@ -21,3 +21,7 @@ Press `q`, and passphrase written to stdout on quitting
 ```
 arousal++zoologist++dating++handgrip++-----++-----
 ```
+
+## Gotchas
+### Keypad
+To use a pc keypad, make sure the keypad is in "number" mode, rather than the control mode. Using the keypad without pressing <kbd>Num Lock</kbd> will probably quit the program.

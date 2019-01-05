@@ -171,9 +171,11 @@ def main(stdscr, separator, passphrase_length, digits_in_number, dicewords):
         elif ch == curses.KEY_RIGHT:
             edit_x += 1
         # TODO Backspace key
-        # elif ch == curses.KEY_BACKSPACE:
-        elif ch == ord('q'):
+        # elif ch == curses.KEY_BACKSPACE or ch == 127:  # 127 is DEL key
+        elif ch == ord('q') or ch == 27:  # 27 is ESC key
             return passphrase_string
+        else:
+            curses.beep()
 
 
 if __name__ == '__main__':
