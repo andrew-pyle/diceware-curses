@@ -83,6 +83,7 @@ def main(stdscr, separator, passphrase_length, digits_in_number, dicewords):
 
     digit_data = [[' ' for _i in range(digits_in_number)] for _j in
                   range(passphrase_length)]
+    passphrase_string = ''
 
     # Create windows for number inputs & save to list
     spacer = 1
